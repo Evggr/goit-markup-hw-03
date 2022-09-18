@@ -1,0 +1,275 @@
+/* колір основного тексту #212121 */
+/* другорядний колір тексту #757575 */
+/* білий колір тексту #FFFFFF  */
+/*синый колір тексту (акцент) #2196F3 */
+/* колір фону навігації #FFFFFF */
+/* колір фону секції герой #2F303A*/
+/* колір фону чим ми займаємося #F5F5F5 */
+/* колір фону наша команда #F5F4FA */
+/* колір фону футера #2F303A*/
+/* колір фону кнопки-герой #2196F3 */
+/* колір фону кнопки-герой при hover & focus #188CE8 */
+
+/* кастомні властивості(root), або CSS змінні.
+В них можназберігати певні значення.
+Додаються на початку документа
+(для зручності зміни кольорів або іншого,
+ шоб не змінювати це вручну) */
+
+/*  letter-spacing for main page
+ nav-0.02em;
+ hero-0.06em;
+ main-0.03em;
+ footer-0.03em;
+ 
+ letter-spacing for portfolio
+ nav-0.02em;
+ main-0.03em;
+ footer-0.03em;
+ */
+
+/* Набір шрифтів 
+ Robotto
+ 400
+ 500
+ 700
+ 900 */
+/* --------------------CSS ЗМІННІ---------------------------- */
+:root {
+  --primary-text-color: #212121;
+  --title-text-color: #757575;
+  --accent-color: #219ff3;
+  --background-color: #ffffff;
+  --footer-text-color: #2f303a;
+  --hero-background-color: #2f303a;
+  --hero-text-color: #ffffff;
+  --logo-white-text-color: #ffffff;
+  --contacts-text-color: rgba(255, 255, 255, 0.6);
+  --team-background-color: #f5f4fa;
+  --hover-hero-button: #188ce8;
+}
+/* ------------------------------------------------------------
+
+-------ЗАДАЄМО ЗНАЧЕННЧ BODY ЯКІ БУДУТЬ УНАСЛІДУВАТИ ІНШІ ЕЛ-ТИ------------ */
+
+.body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  letter-spacing: 0.03em;
+}
+/* ---------------------------------------------------------------------------
+
+-------------СТИЛЬ-УТИЛІТА ДЛЯ ПРИБИРАННЯ КРАПОК В СПИСКАХ-------------------- */
+.list {
+  list-style: none;
+}
+/* ------------------------------------------------------------------------
+
+------------------ПАТТЕРН ДЛЯ ПРИХОВУВАННЯ ЗАГОЛОВКІВ------------------------ */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+/* ------------------------------------------------------------------------
+
+---------------СТИЛІЗАЦІЯ ЛОГОТИПУ----------------------------------------- */
+.logo {
+  color: var(--accent-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+}
+/* -------------------------------------------------------------------------
+
+-------------------НАДАННЯ ЛОГО РІЗНИХ КОЛЬОРІВ---------------------------- */
+
+.logo-header {
+  color: var(--primary-text-color);
+}
+.logo-footer {
+  color: var(--logo-white-text-color);
+}
+/* ---------------------------------------------------------------------------
+
+-------------------НАВІГАЦІЯ ПО САЙТУ-------------------------------------- */
+
+.site-nav .link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+.list-link {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.list-link:hover,
+.list-link:focus {
+  color: var(--accent-color);
+}
+/* ----------------------------------------------------------------------------
+
+---------------------MAIN SECTION-HERO BUTTON-HERO----------------------------------------------------- */
+
+.hero {
+  background-color: var(--hero-background-color);
+}
+
+.hero-title {
+  color: var(--hero-text-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Кнопка-герой */
+
+.hero-button {
+  font-family: inherit;
+  background-color: var(--accent-color);
+  color: var(--hero-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-color: transparent;
+  border-radius: 4px;
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--hover-hero-button);
+}
+
+/* ----------ЗАГОЛОВКИ ТА АБЗАЦИ ДО "НАШІ ПЕРЕВАГИ"-------------------------------- */
+
+.caption {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.caption-text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+/* ----------------------------------------------------------------------------
+
+----------------------Чим ми займаємося----------------------------- */
+.section-title {
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+/* -----------------------------------------------------------------------
+
+---------------------Наша команда------------------------------------------ */
+
+.team {
+  background-color: var(--team-background-color);
+}
+
+.card {
+  background-color: var(--background-color);
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.text {
+  color: var(--title-text-color);
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+/* --------------------Кнопки фільтрів у Портфоліо----------------------------- */
+
+.button {
+  font-family: inherit;
+  background-color: var(--team-background-color);
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-color: transparent;
+  border-radius: 4px;
+}
+.button:hover,
+.button:focus {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+.filters {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+/* -------------------------------------------------------------------------- */
+/* ---------------------Секція з адресами FOOTER------------------ */
+
+.footer {
+  background-color: var(--footer-text-color);
+}
+
+.adress .street {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+.street:hover,
+.street:focus {
+color:var(--accent-color)
+}
+
+.adress .contacts {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--contacts-text-color);
+  text-decoration: none;
+}
+.contacts:hover,
+.contacts:focus {
+  color: var(--accent-color);
+}
+/* -------------------------------------------------------------------- */
