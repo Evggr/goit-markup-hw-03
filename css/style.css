@@ -214,7 +214,6 @@ img {
   padding: 200px 0 200px 0;
 
   background-color: var(--hero-background-color);
-  outline: var(--outline-color);
   text-align: center;
 }
 
